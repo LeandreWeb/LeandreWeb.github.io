@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent: #38a3a5;
+}
+
+body {
+  font-family: "Clash Grotesk", sans-serif;
+  padding: 1em;
+  background-image: url(./bacground.svg);
+  background-color: #F5F5F5;
+}
+
+.presentation {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
+.job{
+  flex: 1;
+}
+
+#name {
+  font-size: 9em;
+
+  color: black;
+}
+.last-name {
+  font-size: 4.5em;
+}
+
+#name-job {
+  position: relative;
+  padding: 1em;
+  line-height: 0.75;
+}
+
+#job {
+  position: absolute;
+  left: 0.5em;
+  bottom: 0;
+  color: var(--accent);
+  font-size: 2em;
+  font-family: "Chillax", sans-serif;
+  font-weight: 600;
+}
+
+#contact{
+  
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+}
+
+.contact-info{
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.person {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#person-container {
+  margin: 0 1em;
+  min-width: 15em;
+  display: grid;
+  align-content: center;
+  border-radius: 0 0 100em 100em;
+  overflow: hidden;
+  transition: transform 250ms ease-in;
+  transform: scale(1);
+  justify-items: center;
+}
+
+#person-container:hover {
+  transform: scale(1.1);
+}
+
+#person-container:hover .portrait {
+  transform: translateY(-.5rem) scale(1.001);
+}
+.img-background {
+  position: absolute;
+  width: 100%;
+  border-radius: 100rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  inset: auto 0 0;
+  margin-inline: auto;
+  box-shadow: inset 0 0 5px 2px var(--accent);
+  padding: 2px;
+}
+
+.portrait {
+  width: 100%;
+  transform: translate(em, 3em);
+  position: relative;
+  transition: transform 250ms ease-in;
+}
+
+.about-me {
+  font-size: xx-large;
+  margin: 1em;
+}
+
+.languages {
+  margin: 1em;
+  
+}
+
+.languages ::marker {
+  color: var(--accent);
+}
+
+.languages li {
+  font-size: xx-large;
+  margin: .5em 1em;
+  width: fit-content;
+  position: relative;
+  padding: 0 .5em;
+  
+  
+  
+}
+
+.languages li::after{
+  display:inline-block ;
+  left: 0;
+  background-color:var(--accent);
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+
+  content: "";
+  transition: 500ms;
+}
+
+.languages li:hover::after{
+  width: 100%;
+  
+}
+fieldset{
+  border: solid  .25em;
+  border-radius: .5em;
+}
+
+legend{
+  width: fit-content;
+  padding: 0 1em;
+  margin-left: 1em;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 2em;
+}
+.page-presenter{
+  margin: 2em 0;
+  width: 100%;
+  display: flex;
+  gap: 3em;
+  padding: 1em;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.page{
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 450px;
+  transition: 50ms;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.page video , .page img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+}
+
+.page:hover{
+  transform: scale(1.35);
+}
+
+.page:hover .pop-up-infos{
+  bottom: 0;
+}
+
+
+#sites{
+  padding: 1em;
+}
+
+.sites-titles{
+  margin: 1em 0;
+}
+
+.languages img{
+  aspect-ratio: 1/1;
+  width: 25px;
+}
+
+.site-description{
+  padding: 1em;
+}
+.pop-up-infos{
+  width: 100%;
+  position: absolute;
+  bottom: -100%;
+  padding: 1em ;
+  color: white;
+  background: linear-gradient( transparent 0%, rgb(4, 4, 4) 100%);
+  transition: .5s;
+
+}
+
