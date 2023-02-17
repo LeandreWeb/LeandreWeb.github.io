@@ -31,6 +31,7 @@ body {
 
 #name {
   font-size: 9em;
+  
 
   color: black;
 }
@@ -144,6 +145,7 @@ body {
   height: 100%;
   position: absolute;
   z-index: -1;
+  border-radius: .5em;
 
   content: "";
   transition: 500ms;
@@ -220,6 +222,7 @@ legend{
 
 .site-description{
   padding: 1em;
+  font-size: 1.5em;
 }
 .pop-up-infos{
   width: 100%;
@@ -229,6 +232,5 @@ legend{
   color: white;
   background: linear-gradient( transparent 0%, rgb(4, 4, 4) 100%);
   transition: .5s;
-
 }
 
