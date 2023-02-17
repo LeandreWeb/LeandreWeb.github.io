@@ -14,7 +14,7 @@ body {
   font-family: "Clash Grotesk", sans-serif;
   padding: 1em;
   background-image: url(./public/images/bacground.svg);
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .presentation {
@@ -25,13 +25,12 @@ body {
   justify-content: center;
 }
 
-.job{
+.job {
   flex: 1;
 }
 
 #name {
   font-size: 9em;
-  
 
   color: black;
 }
@@ -55,14 +54,14 @@ body {
   font-weight: 600;
 }
 
-#contact{
-  
+#contact {
   padding: 1em;
   display: flex;
   gap: 1em;
+  flex-wrap: wrap;
 }
 
-.contact-info{
+.contact-info {
   color: var(--accent);
   font-weight: 500;
 }
@@ -91,7 +90,7 @@ body {
 }
 
 #person-container:hover .portrait {
-  transform: translateY(-.5rem) scale(1.001);
+  transform: translateY(-0.5rem) scale(1.001);
 }
 .img-background {
   position: absolute;
@@ -119,7 +118,6 @@ body {
 
 .languages {
   margin: 1em;
-  
 }
 
 .languages ::marker {
@@ -128,39 +126,35 @@ body {
 
 .languages li {
   font-size: xx-large;
-  margin: .5em 1em;
+  margin: 0.5em 1em;
   width: fit-content;
   position: relative;
-  padding: 0 .5em;
-  
-  
-  
+  padding: 0 0.5em;
 }
 
-.languages li::after{
-  display:inline-block ;
+.languages li::after {
+  display: inline-block;
   left: 0;
-  background-color:var(--accent);
+  background-color: var(--accent);
   width: 0%;
   height: 100%;
   position: absolute;
   z-index: -1;
-  border-radius: .5em;
+  border-radius: 0.5em;
 
   content: "";
   transition: 500ms;
 }
 
-.languages li:hover::after{
+.languages li:hover::after {
   width: 100%;
-  
 }
-fieldset{
-  border: solid  .25em;
-  border-radius: .5em;
+fieldset {
+  border: solid 0.25em;
+  border-radius: 0.5em;
 }
 
-legend{
+legend {
   width: fit-content;
   padding: 0 1em;
   margin-left: 1em;
@@ -168,7 +162,7 @@ legend{
   font-weight: 700;
   font-size: 2em;
 }
-.page-presenter{
+.page-presenter {
   margin: 2em 0;
   width: 100%;
   display: flex;
@@ -177,10 +171,9 @@ legend{
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-
 }
 
-.page{
+.page {
   position: relative;
   aspect-ratio: 16/9;
   width: 450px;
@@ -192,45 +185,89 @@ legend{
   overflow: hidden;
 }
 
-.page video , .page img {
+.page video,
+.page img {
   width: 100%;
   height: 100%;
   border-radius: 1em;
 }
 
-.page:hover{
+.page:hover {
   transform: scale(1.35);
 }
 
-.page:hover .pop-up-infos{
+.page:hover .pop-up-infos {
   bottom: 0;
 }
 
-
-#sites{
+#sites {
   padding: 1em;
 }
 
-.sites-titles{
+.sites-titles {
   margin: 1em 0;
 }
 
-.languages img{
+.languages img {
   aspect-ratio: 1/1;
   width: 25px;
 }
 
-.site-description{
+.site-description {
   padding: 1em;
   font-size: 1.5em;
 }
-.pop-up-infos{
+.pop-up-infos {
   width: 100%;
   position: absolute;
   bottom: -100%;
-  padding: 1em ;
+  padding: 1em;
   color: white;
-  background: linear-gradient( transparent 0%, rgb(4, 4, 4) 100%);
-  transition: .5s;
+  background: linear-gradient(transparent 0%, rgb(4, 4, 4) 100%);
+  transition: 0.5s;
 }
 
+@media screen and (max-width: 645px) {
+  .page:hover {
+    transform: scale(1);
+  }
+
+  .page{
+    width: 100%;
+  }
+  
+  .page-presenter{
+    padding: 5px;
+  }
+  #sites{
+    padding: 0px;
+  }
+
+  #name-job{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  #name{
+    font-size: 5em;
+    text-align: center;
+
+  }
+  .last-name{
+    text-align: center;
+    font-size: 3em;
+  }
+  #job{
+    position: relative;
+    left: 0;
+
+  }
+
+  
+
+
+  
+}
