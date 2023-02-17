@@ -13,7 +13,7 @@
 body {
   font-family: "Clash Grotesk", sans-serif;
   padding: 1em;
-  background-image: url(./images/bacground.svg);
+  background-image: url(./public/images/bacground.svg);
   background-color: #F5F5F5;
 }
 
