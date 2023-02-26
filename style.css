@@ -175,9 +175,9 @@ legend {
 
 .page {
   position: relative;
-  aspect-ratio: 16/9;
-  width: 450px;
-  transition: 50ms;
+
+  transition: scale 50ms;
+
   border-radius: 1em;
   display: flex;
   align-items: center;
@@ -187,8 +187,8 @@ legend {
 
 .page video,
 .page img {
-  width: 100%;
-  height: 100%;
+  aspect-ratio: 16/9;
+  width: 450px;
   border-radius: 1em;
 }
 
@@ -227,23 +227,79 @@ legend {
   transition: 0.5s;
 }
 
+.open {
+  position: fixed;
+  top: 0px;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  padding: 10em;
+  border-radius: 0;
+  /* animation: fullScreen 5s linear forwards ; */
+}
+.open video,
+.open img {
+  width: 100%;
+}
+
+.open:hover {
+  transform: none;
+}
+
+body:has(.open) {
+  overflow: hidden;
+}
+
+@keyframes fullScreen {
+  0% {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    padding: 0 8em;
+    border-radius: 0;
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    
+
+  }
+
+  100% {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    padding: 0 8em;
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
 @media screen and (max-width: 645px) {
   .page:hover {
     transform: scale(1);
   }
 
-  .page{
+  .page {
     width: 100%;
   }
-  
-  .page-presenter{
+
+  .page-presenter {
     padding: 5px;
   }
-  #sites{
+  #sites {
     padding: 0px;
   }
 
-  #name-job{
+  #name-job {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -251,23 +307,16 @@ legend {
     padding: 10px;
   }
 
-  #name{
+  #name {
     font-size: 5em;
     text-align: center;
-
   }
-  .last-name{
+  .last-name {
     text-align: center;
     font-size: 3em;
   }
-  #job{
+  #job {
     position: relative;
     left: 0;
-
   }
-
-  
-
-
-  
 }
