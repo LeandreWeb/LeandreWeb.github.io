@@ -189,7 +189,7 @@ legend {
 .page video,
 .page img {
   aspect-ratio: 16/9;
-  width: 450px;
+  max-width: 450px;
   border-radius: 1em;
 }
 
@@ -363,7 +363,9 @@ dialog video {
     transform: scale(1);
   }
 
-  
+  dialog{
+    display: none;
+  }
 
   .page {
     width: 100%;
@@ -375,6 +377,13 @@ dialog video {
   #sites {
     padding: 0px;
   }
+
+.page video,
+.page img {
+  aspect-ratio: 16/9;
+  max-width: 90%;
+  border-radius: 1em;
+}
 
   #name-job {
     display: flex;
