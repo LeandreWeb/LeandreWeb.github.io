@@ -3,8 +3,25 @@ let closeBtn = document.querySelector(".close");
 
 closeBtn.addEventListener("click", () => {
   const dialog = document.querySelector("dialog");
-  dialog.close()
+  dialog.close();
 });
+
+// window.addEventListener("resize", ()=>{
+//   const dialog = document.querySelector("dialog");
+
+//   console.log(dialog.open  );
+
+//   if(dialog.open && window.innerWidth < 645){
+//     console.log("lets a go");
+
+//     const video=dialog.querySelector("video")
+
+//     console.log(video);
+
+//     video.requestFullscreen()
+
+//   }
+// });
 
 video.forEach((e) => {
   e.addEventListener("mouseover", () => {
@@ -30,23 +47,21 @@ video.forEach((e) => {
     // }
     // else(e.classList.add('open'))
 
-    const dialog = document.querySelector("dialog");
+    if (window.innerWidth < 645) {
+      e.firstElementChild.requestFullscreen();
+    } else {
+      const dialog = document.querySelector("dialog");
 
-    console.log("element", e);
+      const title = dialog.querySelector(".title");
 
-    console.log("parent", e.parentElement.parentElement.firstElementChild);
+      title.textContent =
+        e.parentElement.parentElement.firstElementChild.textContent;
 
-    const title = dialog.querySelector(".title");
+      const video = dialog.querySelector("video");
 
-    title.textContent =
-      e.parentElement.parentElement.firstElementChild.textContent;
+      video.src = e.firstElementChild.src;
 
-    const video = dialog.querySelector("video");
-
-    video.src = e.firstElementChild.src;
-
-    console.log(e.firstElementChild.src);
-
-    dialog.showModal();
+      dialog.showModal();
+    }
   });
 });

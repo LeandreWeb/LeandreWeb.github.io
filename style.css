@@ -228,7 +228,10 @@ legend {
   transition: 0.5s;
 }
 
-.open {
+
+/* Test pour un animation sur pop up en div */
+
+/* .open {
   position: fixed;
   top: 0px;
   background-color: black;
@@ -237,7 +240,7 @@ legend {
   z-index: 1;
   padding: 10em;
   border-radius: 0;
-  /* animation: fullScreen 5s linear forwards ; */
+  animation: fullScreen 5s linear forwards ;
 }
 .open video,
 .open img {
@@ -250,7 +253,7 @@ legend {
 
 body:has(.open) {
   overflow: hidden;
-}
+} */
 
 dialog {
   margin: auto;
@@ -262,14 +265,15 @@ dialog {
   backdrop-filter: blur(10px);
   
 }
-dialog h1 {
-  align-self: start;
-  font-size: 2.25rem;
-  margin-left: 1rem;
-  color: var(--accent);
+
+::backdrop{
+  backdrop-filter: blur(2px);
 }
 
-
+dialog h1 {
+  font-size: 2.25rem;
+  color: var(--accent);
+}
 
 .big-video {
   position: relative;
@@ -277,82 +281,89 @@ dialog h1 {
   align-items: center;
   flex-direction: column;
   padding: 10px;
-
-  gap: .5rem;
 }
 
 .close {
-  
+  position: absolute;
   font-size: 2rem;
   font-weight: 800;
   cursor: pointer;
   background-color: transparent;
   color: white;
   border: transparent;
-  
-  
+  width: 100px;
+}
+
+.header-dialog{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .round{
-  border: solid white;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 3rem;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  aspect-ratio: 1/1;
-  
   border-radius: 100%;
+  overflow: hidden;
 }
+
+
+
+.round img{
+  width: 100px;
+  height: 100px;
+  transition: .5s;
+  aspect-ratio: 1/1;
+  opacity: 0;
+  transform: rotate(-180deg);
+}
+
 
 .close:hover{
   color: var(--complementary)
 
 }
 
-dialog video,
-dialog img {
-  width: 85.25%;
+.close:focus-visible{
+  outline: transparent;
+}
+
+.round:hover .close-text{
+  animation: rotation 1s  forwards ;
+}
+
+dialog video {
+  max-width: 81.75%;
   border-radius: .5rem;
 }
 
-@keyframes fullScreen {
-  0% {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: black;
-    height: 100vh;
-    width: 100%;
-    z-index: 1;
-    padding: 0 8em;
-    border-radius: 0;
-    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
-  }
+
+@keyframes rotation {
+ 
 
   100% {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: black;
-    height: 100vh;
-    width: 100%;
-    z-index: 1;
-    padding: 0 8em;
-    border-radius: 0;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+    transform: rotate(-0deg);
   }
+}
+
+@media screen and (max-width:1575px){
+  dialog video {
+    max-width: 100%;
+    border-radius: .5rem;
+  }
+
 }
 
 @media screen and (max-width: 645px) {
   .page:hover {
     transform: scale(1);
   }
+
+  
 
   .page {
     width: 100%;
