@@ -157,7 +157,7 @@ fieldset {
 
 legend {
   width: fit-content;
-  padding: 0 1em;
+  padding: 0 10px;
   margin-left: 1em;
   color: var(--accent);
   font-weight: 700;
