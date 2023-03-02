@@ -6,9 +6,11 @@
   box-sizing: border-box;
 }
 
+
+
 :root {
   --accent: #38a3a5;
-  --complementary: #A33A38;
+  --complementary: #a33a38;
 }
 
 body {
@@ -18,67 +20,88 @@ body {
   background-color: #f5f5f5;
 }
 
-header { 
+header {
   position: sticky;
   top: 10px;
   display: flex;
   z-index: 3;
   justify-content: space-between;
   align-items: center;
-
 }
 
-#bar-hamburger{
+
+
+#bar-hamburger {
   width: 40px;
   aspect-ratio: 5/1;
   background-color: black;
   position: relative;
 }
 
-#bar-hamburger::after,#bar-hamburger::before {
-
+#bar-hamburger::after,
+#bar-hamburger::before {
   position: absolute;
   content: "";
   width: 40px;
   aspect-ratio: 5/1;
   background-color: inherit;
   
-
 }
 
-#bar-hamburger::after{
-  
+#bar-hamburger::after {
   top: -15px;
 }
 
-#bar-hamburger::before{
-  bottom: -15px;
+#bar-hamburger::before {
+  top: 15px;
 }
 
-.hamburger{
+.hamburger {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   aspect-ratio: 1/1;
   cursor: pointer;
-
   height: 100%;
-
 }
 
-.hamburger:hover #bar-hamburger {
-  
-  background-color: red;
-  animation: hamburgerMain 1s  forwards ;
-
+.open-ham #bar-hamburger {
+  animation: hamburgerMain 1s forwards;
 }
 
-.hamburger:hover #bar-hamburger::after{
+.closed-ham #bar-hamburger {
+  animation: hamburgerMainReverse 1s forwards;
+}
 
+.open-ham #bar-hamburger::after {
   animation: hamburgerAfter 1s forwards;
 }
+.open-ham #bar-hamburger::before {
+  animation: hamburgerBefore 1s forwards;
+}
 
+.closed-ham #bar-hamburger::after {
+  animation: hamburgerAfterReverse 1s forwards;
+}
+
+.closed-ham #bar-hamburger::before {
+  animation: hamburgerBeforeReverse 1s forwards;
+}
+
+
+#projets,#contact-page{
+  color:#101010;
+  font-size: 13vw;
+  text-shadow: -1px 0 var(--accent), 0 1px var(--accent), 1px 0 var(--accent), 0 -1px var(--accent);
+}
+
+#linkedin{
+
+  color: var(--accent);
+  font-size: 2.5rem;
+  font-weight: 800;
+}
 
 .presentation {
   display: flex;
@@ -290,7 +313,6 @@ legend {
   transition: 0.5s;
 }
 
-
 /* Test pour un animation sur pop up en div */
 
 /* .open {
@@ -325,10 +347,9 @@ dialog {
   border-radius: 1rem;
   color: white;
   backdrop-filter: blur(10px);
-  
 }
 
-::backdrop{
+::backdrop {
   backdrop-filter: blur(2px);
 }
 
@@ -356,14 +377,14 @@ dialog h1 {
   width: 100px;
 }
 
-.header-dialog{
+.header-dialog {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 
-.round{
+.round {
   position: relative;
   display: flex;
   align-items: center;
@@ -372,66 +393,297 @@ dialog h1 {
   overflow: hidden;
 }
 
-
-
-.round img{
+.round img {
   width: 100px;
   height: 100px;
-  transition: .5s;
+  transition: 0.5s;
   aspect-ratio: 1/1;
   opacity: 0;
   transform: rotate(-180deg);
 }
 
-
-.close:hover{
-  color: var(--complementary)
-
+.close:hover {
+  color: var(--complementary);
 }
 
-.close:focus-visible{
+.close:focus-visible {
   outline: transparent;
 }
 
-.round:hover .close-text{
-  animation: rotation 1s  forwards ;
+.round:hover .close-text {
+  animation: rotation 1s forwards;
 }
 
 dialog video {
   max-width: 81.75%;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
+}
+
+section {
+  scale: 0;
+  overflow: hidden;
+}
+
+.open-nav {
+  scale: 1;}
+
+.closed-nav{
+  
+  animation: close-nav 1s forwards;
+  
+}
+
+section {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.nav-container {
+  padding: 8em 4em;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.open-nav .links {
+  opacity: 0;
+  animation: opacity .5s .5s forwards ;
+  background-color: #f5f5f5;
+}
+
+.closed-nav .links{
+  animation: opacityReverse .5s   forwards;
+
+}
+
+.links a {
+  text-decoration: none;
+  color: #101010;
+  font-size: 8vw;
+  font-weight: 800;
+  border-top: solid;
+  border-bottom: solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.links a:nth-child(even){
+  border: transparent;
+}
+
+.links a::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  left: 0px;
+  position: absolute;
+  backdrop-filter: invert(95%);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.links a:hover::after {
+  bottom: 0%;
+}
+
+.tiles {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+}
+
+.animations-tiles:nth-child(odd){
+  
+  left: -100%;
+}
+.animations-tiles:nth-child(even){
+  
+  right: -100%;
+}
+.animations-tiles{
+  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  margin: -1px;
+}
+
+.open-nav .animations-tiles:nth-child(odd){
+  animation: moveright .5s linear forwards;
+}
+
+.closed-nav .animations-tiles:nth-child(odd){
+  animation: moverightReverse .5s  linear forwards;
+}
+
+.open-nav .animations-tiles:nth-child(even){
+  animation: moveleft .5s ease-in forwards;
+}
+
+.closed-nav .animations-tiles:nth-child(even){
+  animation: moveleftReverse .5s  ease-in forwards;
+}
+
+@keyframes close-nav{
+  0%,99%{
+    scale: 1;
+  }
+
+  100%{
+    scale: 0;
+  }
+}
+
+@keyframes opacity{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes opacityReverse{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
+@keyframes moveright {
+  from{
+    left: 100%;
+  }
+  to{
+    left: 0%;
+  }
+  
+}
+@keyframes moverightReverse {
+  from{
+    left: 0%;
+  }
+  to{
+    left: 100%;
+  }
+  
+}
+@keyframes moveleft {
+  from{
+    right: 100%;
+  }
+  to{
+    right: 0%;
+  }
+}
+@keyframes moveleftReverse {
+  from{
+    right: 0%;
+  }
+  to{
+    right: 100%;
+  }
 }
 
 
-@keyframes rotation {
- 
 
+@keyframes rotation {
   100% {
     opacity: 1;
     transform: rotate(-0deg);
   }
 }
 
-@keyframes hamburgerMain{
-100%{
-  transform: translate(-5px,-5px);
-  rotate: 45deg;
-}}
+@keyframes hamburgerMain {
 
-@keyframes hamburgerAfter{
-  100%{
-    opacity: 0;
+  0% {
+    transform: translate(0px, 0px);
+    rotate: 0deg;
   }
   
+  100% {
+    transform: translate(-5px, -5px);
+    rotate: 45deg;
+    
+  }
 }
 
+@keyframes hamburgerMainReverse {
+  0% {
+    transform: translate(-5px, -5px);
+    rotate: 45deg;
+    
+  }
+  100% {
+    transform: translate(0px, 0px);
+    rotate: 0deg;
+  }
+}
 
-@media screen and (max-width:1575px){
-  dialog video {
-    max-width: 100%;
-    border-radius: .5rem;
+@keyframes hamburgerAfter {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hamburgerAfterReverse {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 100;
+  }
+}
+
+@keyframes hamburgerBefore {
+  
+
+  50% {
+    top: 25%;
+    
   }
 
+  100% {
+    rotate: 90deg;
+    top:  0px;
+  }
+}
+
+@keyframes hamburgerBeforeReverse {
+  50% {
+    top: 25%;
+  }
+
+  0% {
+    rotate: 90deg;
+    top: 50%;
+  }
+
+  100%{
+    rotate: 0deg;
+    top: 15px;
+  }
+}
+
+@media screen and (max-width: 1575px) {
+  dialog video {
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
 }
 
 @media screen and (max-width: 645px) {
@@ -439,7 +691,7 @@ dialog video {
     transform: scale(1);
   }
 
-  dialog{
+  dialog {
     display: none;
   }
 
@@ -454,12 +706,12 @@ dialog video {
     padding: 0px;
   }
 
-.page video,
-.page img {
-  aspect-ratio: 16/9;
-  max-width: 90%;
-  border-radius: 1em;
-}
+  .page video,
+  .page img {
+    aspect-ratio: 16/9;
+    max-width: 90%;
+    border-radius: 1em;
+  }
 
   #name-job {
     display: flex;

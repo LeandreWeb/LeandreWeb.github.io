@@ -1,5 +1,35 @@
 let video = document.querySelectorAll(".page");
 let closeBtn = document.querySelector(".close");
+let hamberger= document.querySelector(".hamburger")
+
+
+hamberger.addEventListener("click",()=>{
+
+let section=document.querySelector("section")
+
+if (hamberger.classList.contains("closed-ham")) {
+  hamberger.classList.add("open-ham")
+  section.classList.add("open-nav")
+  hamberger.classList.remove('closed-ham')
+  section.classList.remove("closed-nav")
+}
+
+else if(hamberger.classList.contains("open-ham")) {
+  hamberger.classList.add("closed-ham")
+  section.classList.add("closed-nav")
+  hamberger.classList.remove('open-ham')
+  section.classList.remove("open-nav")
+}
+
+else{
+  hamberger.classList.add("open-ham")
+  section.classList.add("open-nav")
+
+}
+
+
+
+})
 
 closeBtn.addEventListener("click", () => {
   const dialog = document.querySelector("dialog");
