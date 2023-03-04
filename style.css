@@ -11,13 +11,16 @@
 :root {
   --accent: #38a3a5;
   --complementary: #a33a38;
+  --dark:#1B1B1B;
+  --light:#f5f5f5;
 }
 
 body {
   font-family: "Clash Grotesk", sans-serif;
   padding: 1em;
+  color: var(--dark);
   background-image: url(./public/images/bacground.svg);
-  background-color: #f5f5f5;
+  background-color: var(--light)
 }
 
 header {
@@ -26,16 +29,21 @@ header {
   display: flex;
   z-index: 3;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;  
 }
 
-
+#Logo {
+  margin-left: 1.5em;
+  aspect-ratio: 1/1;
+  height: 5em;
+}
 
 #bar-hamburger {
   width: 40px;
   aspect-ratio: 5/1;
-  background-color: black;
+  background-color: var(--dark);
   position: relative;
+  margin-right: 1.5em;
 }
 
 #bar-hamburger::after,
@@ -91,16 +99,28 @@ header {
 
 
 #projets,#contact-page{
-  color:#101010;
+  color:var(--dark);
   font-size: 13vw;
-  text-shadow: -1px 0 var(--accent), 0 1px var(--accent), 1px 0 var(--accent), 0 -1px var(--accent);
 }
 
-#linkedin{
-
-  color: var(--accent);
-  font-size: 2.5rem;
+#linkedin ,#mail,#github,#phone{
+  font-size: 2rem;
   font-weight: 800;
+  color: var(--dark)
+}
+#linkedin{
+  color: #0e76a8;
+}
+
+#github{
+  color: #c9510c;
+}
+
+#social{
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
 }
 
 .presentation {
@@ -109,6 +129,7 @@ header {
   font-weight: 700;
   flex-wrap: wrap-reverse;
   justify-content: center;
+  gap: .5em;
 }
 
 .job {
@@ -118,7 +139,7 @@ header {
 #name {
   font-size: 9em;
 
-  color: black;
+  color: var(--dark)
 }
 .last-name {
   font-size: 4.5em;
@@ -147,13 +168,17 @@ header {
   flex-wrap: wrap;
 }
 
+.fa-linkedin{
+  margin-right: .25em;
+}
+
 .contact-info {
   color: var(--accent);
   font-weight: 500;
 }
 
 .person {
-  flex: 1;
+  flex: 2;
   position: relative;
   display: flex;
   justify-content: center;
@@ -192,7 +217,8 @@ header {
 
 .portrait {
   width: 100%;
-  transform: translate(em, 3em);
+  max-width: 400px;
+  transform: translate(0em, 2em);
   position: relative;
   transition: transform 250ms ease-in;
 }
@@ -236,7 +262,7 @@ header {
   width: 100%;
 }
 fieldset {
-  border: solid 0.25em;
+  border: solid 0.25em var(--dark);
   border-radius: 0.5em;
 }
 
@@ -261,6 +287,9 @@ legend {
 
 .page {
   position: relative;
+  cursor: pointer;
+  padding: 5px;
+  background-color: var(--dark);
 
   transition: scale 50ms;
 
@@ -454,7 +483,7 @@ section {
 .open-nav .links {
   opacity: 0;
   animation: opacity .5s .5s forwards ;
-  background-color: #f5f5f5;
+  background-color: var(--light)
 }
 
 .closed-nav .links{
@@ -464,7 +493,7 @@ section {
 
 .links a {
   text-decoration: none;
-  color: #101010;
+  color: var(--dark);
   font-size: 8vw;
   font-weight: 800;
   border-top: solid;
@@ -517,7 +546,7 @@ section {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #f5f5f5;
+  background-color: var(--light);
   margin: -1px;
 }
 
@@ -684,6 +713,14 @@ section {
     max-width: 100%;
     border-radius: 0.5rem;
   }
+}
+
+@media screen and (max-height:450px) {
+
+  .links a {
+    font-size: 10vh;
+  }
+  
 }
 
 @media screen and (max-width: 645px) {
