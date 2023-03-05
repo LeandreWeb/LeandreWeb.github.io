@@ -31,10 +31,12 @@ else{
 
 })
 
-closeBtn.addEventListener("click", () => {
+if (closeBtn){closeBtn.addEventListener("click", () => {
   const dialog = document.querySelector("dialog");
   dialog.close();
-});
+});}
+
+
 
 // window.addEventListener("resize", ()=>{
 //   const dialog = document.querySelector("dialog");

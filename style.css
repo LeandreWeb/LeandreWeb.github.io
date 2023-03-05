@@ -25,7 +25,7 @@ body {
 
 header {
   position: sticky;
-  top: 10px;
+  top: 20px;
   display: flex;
   z-index: 3;
   justify-content: space-between;
@@ -720,6 +720,8 @@ section {
   .links a {
     font-size: 10vh;
   }
+
+  
   
 }
 
@@ -727,6 +729,11 @@ section {
   .page:hover {
     transform: scale(1);
   }
+  #linkedin ,#mail,#github,#phone{
+    font-size: 5vw;
+    
+  }
+  
 
   dialog {
     display: none;
