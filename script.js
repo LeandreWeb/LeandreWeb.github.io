@@ -26,9 +26,6 @@ else{
   section.classList.add("open-nav")
 
 }
-
-
-
 })
 
 if (closeBtn){closeBtn.addEventListener("click", () => {
