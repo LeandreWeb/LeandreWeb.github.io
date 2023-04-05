@@ -491,6 +491,13 @@ section {
 
 }
 
+.cv{
+  display: block;
+  color: var(--complementary);
+  font-weight: 800;
+  font-size: x-large;
+}
+
 .links a {
   text-decoration: none;
   color: var(--dark);
