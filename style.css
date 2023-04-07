@@ -6,31 +6,59 @@
   box-sizing: border-box;
 }
 
-
-
 :root {
   --accent: #38a3a5;
   --complementary: #a33a38;
-  --dark:#1B1B1B;
-  --light:#f5f5f5;
-  --light-transparent:#f5f5f588;
+  --dark: #1b1b1b;
+  --light: #f5f5f5;
+  --light-transparent: #f5f5f588;
 }
 
 body {
   font-family: "Clash Grotesk", sans-serif;
-  padding: 1em;
+
   color: var(--dark);
-  background-image: url(./public/images/bacground.svg);
-  background-color: var(--light)
+  position: relative;
+}
+
+#body_wrapper {
+  padding-top: 2em;
+  background-image: url(./public/images/background.svg);
+  background-color: var(--light);
+  min-height: 100vh;
+  padding: 1em;
+}
+
+hr{
+  background-color: var(--dark);
+  height: 10px;
+  width: 95%;
+  margin: auto;
+}
+
+.presentation {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  gap: 0.5em;
+  height: calc(100vh);
+  position: relative;
+  background: fixed;
+  background-position: 0px;
+  background-size: cover;
+  background-image: url(/public/images/presentation.svg);
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 20px;
   display: flex;
+  width: 100%;
   z-index: 3;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;
 }
 
 #Logo {
@@ -54,7 +82,6 @@ header {
   width: 40px;
   aspect-ratio: 5/1;
   background-color: inherit;
-  
 }
 
 #bar-hamburger::after {
@@ -98,52 +125,49 @@ header {
   animation: hamburgerBeforeReverse 1s forwards;
 }
 
-
-#projets,#contact-page{
-  color:var(--dark);
+#projets,
+#contact-page {
+  color: var(--dark);
   font-size: 13vw;
+  margin-top: 60px;
 }
 
-#linkedin ,#mail,#github,#phone{
+#linkedin,
+#mail,
+#github,
+#phone {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--dark)
+  color: var(--dark);
 }
-#linkedin{
+#linkedin {
   color: #0e76a8;
 }
 
-#github{
+#github {
   color: #c9510c;
 }
 
-#social{
+#social {
   margin-top: 2em;
   display: flex;
   flex-direction: column;
-  gap: .5em;
-}
-
-.presentation {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  flex-wrap: wrap-reverse;
-  justify-content: center;
-  gap: .5em;
+  gap: 0.5em;
 }
 
 .job {
   flex: 1;
+  position: sticky;
+  top: 80px;
 }
 
 #name {
-  font-size: 9em;
+  font-size: 10em;
 
-  color: var(--dark)
+  color: var(--dark);
 }
 .last-name {
-  font-size: 4.5em;
+  font-size: 5em;
 }
 
 #name-job {
@@ -169,8 +193,8 @@ header {
   flex-wrap: wrap;
 }
 
-.fa-linkedin{
-  margin-right: .25em;
+.fa-linkedin {
+  margin-right: 0.25em;
 }
 
 .contact-info {
@@ -218,7 +242,7 @@ header {
 
 .portrait {
   width: 100%;
-  max-width: 400px;
+  max-width: 550px;
   transform: translate(0em, 2em);
   position: relative;
   transition: transform 250ms ease-in;
@@ -226,7 +250,10 @@ header {
 
 .about-me {
   font-size: xx-large;
+  font-weight: 800;
+  min-height: 5em;
   margin: 1em;
+  text-align: justify;
 }
 
 .languages {
@@ -243,6 +270,7 @@ header {
   width: fit-content;
   position: relative;
   padding: 0 0.5em;
+  z-index: 2;
 }
 
 .languages li::after {
@@ -263,17 +291,15 @@ header {
   width: 100%;
 }
 
-.abilities{
+.abilities {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-.abilities ul{
+.abilities ul {
   flex: 1;
 }
-
-
 
 fieldset {
   border: solid 0.25em var(--dark);
@@ -355,8 +381,6 @@ legend {
   background: linear-gradient(transparent 0%, rgb(4, 4, 4) 100%);
   transition: 0.5s;
 }
-
-
 
 dialog {
   margin: auto;
@@ -445,12 +469,12 @@ section {
 }
 
 .open-nav {
-  scale: 1;}
+  z-index: 2;
+  scale: 1;
+}
 
-.closed-nav{
-  
+.closed-nav {
   animation: close-nav 1s forwards;
-  
 }
 
 section {
@@ -473,16 +497,15 @@ section {
 
 .open-nav .links {
   opacity: 0;
-  animation: opacity .5s .5s forwards ;
-  background-color: var(--light)
+  animation: opacity 0.5s 0.5s forwards;
+  background-color: var(--light);
 }
 
-.closed-nav .links{
-  animation: opacityReverse .5s   forwards;
-
+.closed-nav .links {
+  animation: opacityReverse 0.5s forwards;
 }
 
-.cv{
+.cv {
   display: block;
   color: var(--complementary);
   font-weight: 800;
@@ -500,7 +523,7 @@ section {
   overflow: hidden;
 }
 
-.links a:nth-child(even){
+.links a:nth-child(even) {
   border: transparent;
 }
 
@@ -531,15 +554,13 @@ section {
   flex-direction: column;
 }
 
-.animations-tiles:nth-child(odd){
-  
+.animations-tiles:nth-child(odd) {
   left: -100%;
 }
-.animations-tiles:nth-child(even){
-  
+.animations-tiles:nth-child(even) {
   right: -100%;
 }
-.animations-tiles{
+.animations-tiles {
   flex: 1;
   position: relative;
   width: 100%;
@@ -548,85 +569,82 @@ section {
   margin: -1px;
 }
 
-.open-nav .animations-tiles:nth-child(odd){
-  animation: moveright .5s linear forwards;
+.open-nav .animations-tiles:nth-child(odd) {
+  animation: moveright 0.5s linear forwards;
 }
 
-.closed-nav .animations-tiles:nth-child(odd){
-  animation: moverightReverse .5s  linear forwards;
+.closed-nav .animations-tiles:nth-child(odd) {
+  animation: moverightReverse 0.5s linear forwards;
 }
 
-.open-nav .animations-tiles:nth-child(even){
-  animation: moveleft .5s ease-in forwards;
+.open-nav .animations-tiles:nth-child(even) {
+  animation: moveleft 0.5s ease-in forwards;
 }
 
-.closed-nav .animations-tiles:nth-child(even){
-  animation: moveleftReverse .5s  ease-in forwards;
+.closed-nav .animations-tiles:nth-child(even) {
+  animation: moveleftReverse 0.5s ease-in forwards;
 }
 
-@keyframes close-nav{
-  0%,99%{
+@keyframes close-nav {
+  0%,
+  99% {
     scale: 1;
   }
 
-  100%{
+  100% {
     scale: 0;
   }
 }
 
-@keyframes opacity{
-  from{
+@keyframes opacity {
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
-@keyframes opacityReverse{
-  from{
+@keyframes opacityReverse {
+  from {
     opacity: 1;
   }
-  to{
+  to {
     opacity: 0;
   }
 }
 
 @keyframes moveright {
-  from{
+  from {
     left: 100%;
   }
-  to{
+  to {
     left: 0%;
   }
-  
 }
 @keyframes moverightReverse {
-  from{
+  from {
     left: 0%;
   }
-  to{
+  to {
     left: 100%;
   }
-  
 }
 @keyframes moveleft {
-  from{
+  from {
     right: 100%;
   }
-  to{
+  to {
     right: 0%;
   }
 }
 @keyframes moveleftReverse {
-  from{
+  from {
     right: 0%;
   }
-  to{
+  to {
     right: 100%;
   }
 }
-
-
 
 @keyframes rotation {
   100% {
@@ -636,16 +654,14 @@ section {
 }
 
 @keyframes hamburgerMain {
-
   0% {
     transform: translate(0px, 0px);
     rotate: 0deg;
   }
-  
+
   100% {
     transform: translate(-5px, -5px);
     rotate: 45deg;
-    
   }
 }
 
@@ -653,7 +669,6 @@ section {
   0% {
     transform: translate(-5px, -5px);
     rotate: 45deg;
-    
   }
   100% {
     transform: translate(0px, 0px);
@@ -671,22 +686,19 @@ section {
   0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 100;
   }
 }
 
 @keyframes hamburgerBefore {
-  
-
   50% {
     top: 25%;
-    
   }
 
   100% {
     rotate: 90deg;
-    top:  0px;
+    top: 0px;
   }
 }
 
@@ -700,7 +712,7 @@ section {
     top: 50%;
   }
 
-  100%{
+  100% {
     rotate: 0deg;
     top: 15px;
   }
@@ -713,25 +725,31 @@ section {
   }
 }
 
-@media screen and (max-height:450px) {
-
+@media screen and (max-height: 450px) {
+  .job {
+    padding-top: 1em;
+  }
   .links a {
     font-size: 10vh;
   }
-
-  
-  
+  .person {
+    width: 25px;
+  }
+  #person-container {
+    min-width: 0px;
+  }
 }
 
 @media screen and (max-width: 645px) {
   .page:hover {
     transform: scale(1);
   }
-  #linkedin ,#mail,#github,#phone{
+  #linkedin,
+  #mail,
+  #github,
+  #phone {
     font-size: 5vw;
-    
   }
-  
 
   dialog {
     display: none;
@@ -774,5 +792,8 @@ section {
   #job {
     position: relative;
     left: 0;
+  }
+  .presentation {
+    background-image: url(/public/images/cellbackground.svg);
   }
 }
