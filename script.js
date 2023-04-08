@@ -35,22 +35,7 @@ if (closeBtn){closeBtn.addEventListener("click", () => {
 
 
 
-// window.addEventListener("resize", ()=>{
-//   const dialog = document.querySelector("dialog");
 
-//   console.log(dialog.open  );
-
-//   if(dialog.open && window.innerWidth < 645){
-//     console.log("lets a go");
-
-//     const video=dialog.querySelector("video")
-
-//     console.log(video);
-
-//     video.requestFullscreen()
-
-//   }
-// });
 
 video.forEach((e) => {
   e.addEventListener("mouseover", () => {
@@ -67,14 +52,6 @@ video.forEach((e) => {
   });
 
   e.addEventListener("click", () => {
-    // console.log(e.firstElementChild);
-
-    // e.firstElementChild.requestFullscreen();
-
-    // if (e.classList.contains('open')) {
-    //   e.classList.remove('open')
-    // }
-    // else(e.classList.add('open'))
 
     if (window.innerWidth < 645) {
       e.firstElementChild.requestFullscreen();
@@ -94,3 +71,28 @@ video.forEach((e) => {
     }
   });
 });
+
+const wait = (delay = 0) =>
+  new Promise(resolve => setTimeout(resolve, delay));
+
+const setVisible = (elementOrSelector, visible) => 
+  (typeof elementOrSelector === 'string'
+    ? document.querySelector(elementOrSelector)
+    : elementOrSelector
+  ).style.display = visible ? 'block' : 'none';
+
+
+setVisible('#loading', true);
+
+
+document,addEventListener("DOMContentLoaded",()=>{
+  wait(1550).then(() => {
+    let presentation=document.querySelector(".presentation")
+    setVisible('#loading', false);
+
+    if (presentation) {
+      presentation.classList.add("loaded")
+    }
+  })
+
+})
