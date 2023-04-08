@@ -86,7 +86,7 @@ setVisible('#loading', true);
 
 
 document,addEventListener("DOMContentLoaded",()=>{
-  wait(1550).then(() => {
+  wait(1150).then(() => {
     let presentation=document.querySelector(".presentation")
     setVisible('#loading', false);
 
