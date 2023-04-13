@@ -5,7 +5,7 @@ let hamberger= document.querySelector(".hamburger")
 
 hamberger.addEventListener("click",()=>{
 
-let section=document.querySelector("section")
+let section=document.querySelector(".nav_wrapper")
 
 if (hamberger.classList.contains("closed-ham")) {
   hamberger.classList.add("open-ham")

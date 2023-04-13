@@ -31,170 +31,184 @@
       href="/public/favicons/favicon-16x16.png"
     />
     <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="/public/favicons-dark/apple-touch-icon.png"
-    media="(prefers-color-scheme: light)"
-    
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="/public/favicons-dark/favicon-32x32.png"
-    media="(prefers-color-scheme: light)"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="/public/favicons-dark/favicon-16x16.png"
-    media="(prefers-color-scheme: light)"
-  />
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/favicons-dark/apple-touch-icon.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/favicons-dark/favicon-32x32.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/favicons-dark/favicon-16x16.png"
+      media="(prefers-color-scheme: light)"
+    />
     <link rel="manifest" href="/public/favicons/site.webmanifest" />
     <script src="./script.js" defer></script>
     <title>LBB Developpeur Web</title>
   </head>
   <body>
     <div id="loading">
-      <img src="./public/images/Loader.svg" alt="">     </div>
+      <img src="./public/images/Loader.svg" alt="" />
+    </div>
     <header>
-      <a href="/index.html"><img id="Logo" src="./public/images/LogoLbbDev.svg" alt=""></a>
+      <a href="/index.html"
+        ><img id="Logo" src="./public/images/LogoLbbDev.svg" alt=""
+      /></a>
       <div class="hamburger">
         <div id="bar-hamburger"></div>
       </div>
     </header>
-    <div id="body_wrapper">
+    <!-- body wrapper -->
+    <section id="body_wrapper">
       <h1 id="projets">Projets</h1>
-    <div id="sites">
-      <fieldset>
-        <legend>Elle-Tronic</legend>
-        <p class="site-description">
-          Site Web construit avec Vue.js et TypeScript. Magasin électronique
-          construit avec l'API de Best Buy. Interface de produits complète avec
-          filtres et option de changer l'ordre des produits. Comprend un CRUD
-          des utilisateurs et sa sauvegarde de panier. Le tout est complété par
-          une simulation de passage à la caisse.
-        </p>
-        <div class="page-presenter">
-          <div class="page img-1">
-            <video
-              src="./public/videos/Elle-ctronic - Google Chrome 2023-02-15 13-59-52_Trim (2).mp4"
-              muted
-              loop
-            ></video>
-            <div class="pop-up-infos">
-              <h1>Page des offres</h1>
+
+      <!-- Sites -->
+      <section id="sites">
+        <fieldset>
+          <legend>Elle-Tronic</legend>
+          <p class="site-description">
+            Site Web construit avec Vue.js et TypeScript. Magasin électronique
+            construit avec l'API de Best Buy. Interface de produits complète
+            avec filtres et option de changer l'ordre des produits. Comprend un
+            CRUD des utilisateurs et sa sauvegarde de panier. Le tout est
+            complété par une simulation de passage à la caisse.
+          </p>
+          <div class="page-presenter">
+            <div class="page img-1">
+              <video
+                src="./public/videos/Elle-ctronic - Google Chrome 2023-02-15 13-59-52_Trim (2).mp4"
+                muted
+                loop
+                loading="lazy"
+              ></video>
+              <div class="pop-up-infos">
+                <h1>Page des offres</h1>
+              </div>
+            </div>
+            <div class="page img-2">
+              <video
+                src="./public/videos/Elle-ctronic - Google Chrome 2023-02-15 14-16-32_Trim.mp4"
+                muted
+                loop
+                loading="lazy"
+              ></video>
+              <div class="pop-up-infos">
+                <h1>Page de Connexion</h1>
+              </div>
+            </div>
+            <div class="page img-3">
+              <video
+                src="./public/videos/Elle-ctronic - Google Chrome 2023-02-15 14-25-02_Trim.mp4"
+                muted
+                loop
+                loading="lazy"
+              ></video>
+              <div class="pop-up-infos">
+                <h1>Page A Propos des Developper</h1>
+              </div>
             </div>
           </div>
-          <div class="page img-2">
-            <video
-              src="./public/videos/Elle-ctronic - Google Chrome 2023-02-15 14-16-32_Trim.mp4"
-              muted
-              loop
-            ></video>
-            <div class="pop-up-infos">
-              <h1>Page de Connexion</h1>
+        </fieldset>
+        <fieldset>
+          <legend>Magasin Général</legend>
+          <p class="site-description">
+            Site Web construit avec Express.js. Connecté avec MongoDB avec une
+            grande liste de produits. Contient une liste de produits avec la
+            possibilité de supprimer, modifier et ajouter des produits. Il y a
+            aussi une caisse qui enregistre les articles choisis et sauvegarde
+            la transaction dans la base de données MongoDB
+          </p>
+          <div class="page-presenter">
+            <div class="page img-1">
+              <video
+                src="./public/videos/MagasinGénéralAccueil.mp4"
+                muted
+                loop
+                loading="lazy"
+              ></video>
+              <div class="pop-up-infos">
+                <h1>Page d'accueil</h1>
+              </div>
+            </div>
+            <div class="page img-2">
+              <video
+                src="./public/videos/Magasin Lebrun - Google Chrome 2023-02-16 10-02-45_Trim.mp4"
+                muted
+                loop
+                loading="lazy"
+              ></video>
+              <div class="pop-up-infos">
+                <h1>Caisse</h1>
+              </div>
+            </div>
+            <div class="page img-3">
+              <video
+                src="./public/videos/Magasin Lebrun - Google Chrome 2023-02-16 10-12-18_Trim.mp4"
+                muted
+                loop
+                loading="lazy"
+              ></video>
+              <div class="pop-up-infos">
+                <h1>Page des Produits</h1>
+              </div>
             </div>
           </div>
-          <div class="page img-3">
-            <video
-              src="./public/videos/Elle-ctronic - Google Chrome 2023-02-15 14-25-02_Trim.mp4"
-              muted
-              loop
-            ></video>
-            <div class="pop-up-infos">
-              <h1>Page A Propos des Developper</h1>
+        </fieldset>
+        <fieldset>
+          <legend>Liste Netflix</legend>
+          <p class="site-description">
+            Liste de films à voir. L'utilisateur peut consulter chaque film avec
+            son affiche, le nom du réalisateur, son score sur Rotten Tomatoes,
+            sa date de sortie et s'il est disponible sur Netflix. L'utilisateur
+            peut également ajouter des films avec une URL valide pour l'affiche.
+            Il peut également modifier et supprimer un film de la liste.
+          </p>
+          <div class="page-presenter">
+            <div class="page img-1">
+              <video
+                src="./public/videos/Liste Netflix - Google Chrome 2023-02-16 10-26-55_Trim.mp4"
+                muted
+                loop
+                loading="lazy"
+              ></video>
+              <div class="pop-up-infos">
+                <h1>Ajout de film</h1>
+              </div>
+            </div>
+            <div class="page img-2">
+              <video
+                src="./public/videos/Desktop 2023.02.16 - 10.47.18.01_Trim.mp4"
+                muted
+                loop
+                loading="lazy"
+              ></video>
+              <div class="pop-up-infos">
+                <h1>Modification Films</h1>
+              </div>
+            </div>
+            <div class="page img-3">
+              <video
+                src="./public/videos/Desktop 2023.02.16 - 10.51.34.02_Trim.mp4"
+                muted
+                loop
+                loading="lazy"
+              ></video>
+              <div class="pop-up-infos">
+                <h1>Supression de film</h1>
+              </div>
             </div>
           </div>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Magasin Général</legend>
-        <p class="site-description">
-          Site Web construit avec Express.js. Connecté avec MongoDB avec une
-          grande liste de produits. Contient une liste de produits avec la
-          possibilité de supprimer, modifier et ajouter des produits. Il y a
-          aussi une caisse qui enregistre les articles choisis et sauvegarde la
-          transaction dans la base de données MongoDB
-        </p>
-        <div class="page-presenter">
-          <div class="page img-1">
-            <video
-              src="./public/videos/MagasinGénéralAccueil.mp4"
-              muted
-              loop
-            ></video>
-            <div class="pop-up-infos">
-              <h1>Page d'accueil</h1>
-            </div>
-          </div>
-          <div class="page img-2">
-            <video
-              src="./public/videos/Magasin Lebrun - Google Chrome 2023-02-16 10-02-45_Trim.mp4"
-              muted
-              loop
-            ></video>
-            <div class="pop-up-infos">
-              <h1>Caisse</h1>
-            </div>
-          </div>
-          <div class="page img-3">
-            <video
-              src="./public/videos/Magasin Lebrun - Google Chrome 2023-02-16 10-12-18_Trim.mp4"
-              muted
-              loop
-            ></video>
-            <div class="pop-up-infos">
-              <h1>Page des Produits</h1>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Liste Netflix</legend>
-        <p class="site-description">
-          Liste de films à voir. L'utilisateur peut consulter chaque film avec
-          son affiche, le nom du réalisateur, son score sur Rotten Tomatoes, sa
-          date de sortie et s'il est disponible sur Netflix. L'utilisateur peut
-          également ajouter des films avec une URL valide pour l'affiche. Il
-          peut également modifier et supprimer un film de la liste.
-        </p>
-        <div class="page-presenter">
-          <div class="page img-1">
-            <video
-              src="./public/videos/Liste Netflix - Google Chrome 2023-02-16 10-26-55_Trim.mp4"
-              muted
-              loop
-            ></video>
-            <div class="pop-up-infos">
-              <h1>Ajout de film</h1>
-            </div>
-          </div>
-          <div class="page img-2">
-            <video
-              src="./public/videos/Desktop 2023.02.16 - 10.47.18.01_Trim.mp4"
-              muted
-              loop
-            ></video>
-            <div class="pop-up-infos">
-              <h1>Modification Films</h1>
-            </div>
-          </div>
-          <div class="page img-3">
-            <video
-              src="./public/videos/Desktop 2023.02.16 - 10.51.34.02_Trim.mp4"
-              muted
-              loop
-            ></video>
-            <div class="pop-up-infos">
-              <h1>Supression de film</h1>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-    </div>
+        </fieldset>
+      </section>
+    </section>
     <dialog>
       <div class="big-video">
         <div class="header-dialog">
@@ -208,7 +222,7 @@
         <video muted loop autoplay></video>
       </div>
     </dialog>
-    <section>
+    <section class="nav_wrapper">
       <div class="nav-container">
         <div class="links">
           <a href="/index.html">Accueil</a>

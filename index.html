@@ -69,8 +69,9 @@
     </div>
     
   </header>
-  <body>
-    <div class="presentation">
+  <main>
+    <!-- Presentation -->
+    <section class="presentation">
       <div class="job">
         <div>
           <div id="name-job">
@@ -120,9 +121,11 @@
           1689.60 345.00 h 110 V -600 H -337.92 Z" fill="none" stroke="#C4C4C4" stroke-width="50"></path></g>
           </svg>
       </div>
-    </div> 
+    </section> 
     <hr >
-    <div id="body_wrapper">
+    
+    <!-- reste du main -->
+    <section id="body_wrapper">
       <div class="about-me">
         <p>
           Actuellement étudiant en Développement web, je suis à la recherche d'un
@@ -130,7 +133,8 @@
           dans le domaine.
         </p>
       </div>
-      <div class="languages">
+      <!-- languages -->
+      <section class="languages">
         <h2>
           Compétences et language de programmation
           <i class="fa-solid fa-code"></i>
@@ -162,8 +166,9 @@
         </ul>
       </div>
       </div>
-  
-      <div id="sites">
+      
+      <!-- Sites -->
+      <section id="sites">
         <h1 class="sites-titles">Projets École</h1>
         <fieldset>
           <legend>Elle-Tronic</legend>
@@ -180,6 +185,7 @@
                 src="./public/videos/Elle-ctronic - Google Chrome 2023-02-15 13-59-52_Trim (2).mp4"
                 muted
                 loop
+                loading="lazy"
               ></video>
               <div class="pop-up-infos">
                 <h1>Page des offres</h1>
@@ -190,6 +196,7 @@
                 src="./public/videos/Elle-ctronic - Google Chrome 2023-02-15 14-16-32_Trim.mp4"
                 muted
                 loop
+                loading="lazy"
               ></video>
               <div class="pop-up-infos">
                 <h1>Page de Connexion</h1>
@@ -200,6 +207,7 @@
                 src="./public/videos/Elle-ctronic - Google Chrome 2023-02-15 14-25-02_Trim.mp4"
                 muted
                 loop
+                loading="lazy"
               ></video>
               <div class="pop-up-infos">
                 <h1>Page A Propos des Developper</h1>
@@ -222,6 +230,7 @@
                 src="./public/videos/MagasinGénéralAccueil.mp4"
                 muted
                 loop
+                loading="lazy"
               ></video>
               <div class="pop-up-infos">
                 <h1>Page d'accueil</h1>
@@ -232,6 +241,7 @@
                 src="./public/videos/Magasin Lebrun - Google Chrome 2023-02-16 10-02-45_Trim.mp4"
                 muted
                 loop
+                loading="lazy"
               ></video>
               <div class="pop-up-infos">
                 <h1>Caisse</h1>
@@ -242,6 +252,7 @@
                 src="./public/videos/Magasin Lebrun - Google Chrome 2023-02-16 10-12-18_Trim.mp4"
                 muted
                 loop
+                loading="lazy"
               ></video>
               <div class="pop-up-infos">
                 <h1>Page des Produits</h1>
@@ -264,6 +275,7 @@
                 src="./public/videos/Liste Netflix - Google Chrome 2023-02-16 10-26-55_Trim.mp4"
                 muted
                 loop
+                loading="lazy"
               ></video>
               <div class="pop-up-infos">
                 <h1>Ajout de film</h1>
@@ -274,6 +286,7 @@
                 src="./public/videos/Desktop 2023.02.16 - 10.47.18.01_Trim.mp4"
                 muted
                 loop
+                loading="lazy"
               ></video>
               <div class="pop-up-infos">
                 <h1>Modification Films</h1>
@@ -284,6 +297,7 @@
                 src="./public/videos/Desktop 2023.02.16 - 10.51.34.02_Trim.mp4"
                 muted
                 loop
+                loading="lazy"
               ></video>
               <div class="pop-up-infos">
                 <h1>Supression de film</h1>
@@ -291,10 +305,10 @@
             </div>
           </div>
         </fieldset>
-      </div>
+      </section>
     </div>
 
-    
+    <!-- pop-up video -->
     <dialog>
       <div class="big-video">
         <div class="header-dialog">
@@ -308,7 +322,8 @@
         <video muted loop autoplay></video>
       </div>
     </dialog>
-    <section>
+    <!-- menu navigation -->
+    <section class="nav_wrapper">
       <div class="nav-container">
         <div class="links">
           <a href="/index.html">Accueil</a>

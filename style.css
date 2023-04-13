@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 
+/* --- Css general --- */
 * {
   padding: 0px;
   margin: 0px;
@@ -14,6 +15,23 @@
   --light-transparent: #f5f5f588;
 }
 
+body {
+  font-family: "Clash Grotesk", sans-serif;
+  color: var(--dark);
+  position: relative;
+}
+
+hr {
+  background-color: var(--dark);
+  height: 10px;
+  width: 95%;
+  margin: auto;
+}
+
+/* --- Loading --- */
+
+
+
 #loading {
   position: fixed;
   z-index: 100;
@@ -26,55 +44,7 @@
   
 }
 
-
-body {
-  font-family: "Clash Grotesk", sans-serif;
-  color: var(--dark);
-  position: relative;
-}
-
-#body_wrapper {
-  padding-top: 2em;
-  background-image: url(./public/images/background.svg);
-  background-color: var(--light);
-  min-height: 100vh;
-  padding: 1em;
-}
-
-hr {
-  background-color: var(--dark);
-  height: 10px;
-  width: 95%;
-  margin: auto;
-}
-
-.presentation {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  flex-wrap: wrap-reverse;
-  justify-content: center;
-  gap: 0.5em;
-  height: calc(100vh);
-  position: relative;
-}
-
-.presentation_background{
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  top: 0px;
-}
-
-.loaded .line1,.loaded .line2 {
-  
-    stroke-dasharray: 1800;
-    stroke-dashoffset: -1800;
-    animation: dash 2.5s linear forwards;
-}
-
-
+/* --- header --- */
 
 
 header {
@@ -88,6 +58,7 @@ header {
   background-color: var(--light);
   border-bottom: 1px solid var(--accent);
 }
+
 
 #Logo {
   margin-left: 1.5em;
@@ -153,34 +124,26 @@ header {
   animation: hamburgerBeforeReverse 1s forwards;
 }
 
-#projets,
-#contact-page {
-  color: var(--dark);
-  font-size: 13vw;
-  margin-top: 80px;
-}
+/* --- Presentation --- */
 
-#linkedin,
-#mail,
-#github,
-#phone {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--dark);
-}
-#linkedin {
-  color: #0e76a8;
-}
 
-#github {
-  color: #c9510c;
-}
-
-#social {
-  margin-top: 2em;
+.presentation {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
   gap: 0.5em;
+  height: calc(100vh);
+  position: relative;
+}
+
+.presentation_background{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  top: 0px;
 }
 
 .job {
@@ -191,7 +154,7 @@ header {
 
 #name {
   font-size: 10em;
-
+  
   color: var(--dark);
 }
 .last-name {
@@ -219,22 +182,6 @@ header {
   display: flex;
   gap: 1em;
   flex-wrap: wrap;
-}
-
-.fa-linkedin {
-  margin-right: 0.25em;
-}
-
-.contact-info {
-  color: var(--accent);
-  font-weight: 500;
-}
-
-.person {
-  flex: 2;
-  position: relative;
-  display: flex;
-  justify-content: center;
 }
 
 #person-container {
@@ -268,6 +215,13 @@ header {
   padding: 2px;
 }
 
+.person {
+  flex: 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 .portrait {
   width: 100%;
   max-width: 550px;
@@ -276,6 +230,75 @@ header {
   transition: transform 250ms ease-in;
 }
 
+.loaded .line1,.loaded .line2 {
+  
+  stroke-dasharray: 1800;
+  stroke-dashoffset: -1800;
+  animation: dash 2.5s linear forwards;
+}
+
+
+
+#projets,
+#contact-page {
+  color: var(--dark);
+  font-size: 13vw;
+  margin-top: 80px;
+}
+
+/* ---page contact--  */
+
+
+#linkedin,
+#mail,
+#github,
+#phone {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--dark);
+}
+#linkedin {
+  color: #0e76a8;
+}
+
+#github {
+  color: #c9510c;
+}
+
+#social {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.fa-linkedin {
+  margin-right: 0.25em;
+}
+
+.contact-info {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.cv {
+  display: block;
+  color: var(--complementary);
+  font-weight: 800;
+  font-size: x-large;
+}
+
+/* Body wrapper */ 
+#body_wrapper {
+  padding-top: 2em;
+  background-image: url(./public/images/background.svg);
+  background-color: var(--light);
+  min-height: 100vh;
+  padding: 1em;
+}
+
+
+/* about-me */
 .about-me {
   font-size: xx-large;
   font-weight: 800;
@@ -283,6 +306,8 @@ header {
   margin: 1em;
   text-align: justify;
 }
+
+/* languages */
 
 .languages {
   margin: 1em;
@@ -328,6 +353,14 @@ header {
 .abilities ul {
   flex: 1;
 }
+
+.languages img {
+  aspect-ratio: 1/1;
+  width: 25px;
+}
+
+
+/* sites */
 
 fieldset {
   border: solid 0.25em var(--dark);
@@ -391,15 +424,14 @@ legend {
   margin: 1em 0;
 }
 
-.languages img {
-  aspect-ratio: 1/1;
-  width: 25px;
-}
 
 .site-description {
   padding: 1em;
   font-size: 1.5em;
 }
+
+/* Pop-up video */
+
 .pop-up-infos {
   width: 100%;
   position: absolute;
@@ -491,8 +523,16 @@ dialog video {
   border-radius: 0.5rem;
 }
 
-section {
+/* navigation */
+
+.nav_wrapper {
   scale: 0;
+  overflow: hidden;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0px;
+  left: 0px;
   overflow: hidden;
 }
 
@@ -505,14 +545,7 @@ section {
   animation: close-nav 1s forwards;
 }
 
-section {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-}
+
 
 .nav-container {
   padding: 8em 4em;
@@ -533,12 +566,7 @@ section {
   animation: opacityReverse 0.5s forwards;
 }
 
-.cv {
-  display: block;
-  color: var(--complementary);
-  font-weight: 800;
-  font-size: x-large;
-}
+
 
 .links a {
   text-decoration: none;
@@ -612,6 +640,10 @@ section {
 .closed-nav .animations-tiles:nth-child(even) {
   animation: moveleftReverse 0.5s ease-in forwards;
 }
+
+
+
+/* Animations */
 
 @keyframes close-nav {
   0%,
@@ -746,26 +778,13 @@ section {
   }
 }
 
-@-webkit-keyframes coffee {
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(-300%);
-    transform: translateY(-300%);
-  }
-}
-@keyframes coffee {
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(-300%);
-    transform: translateY(-300%);
-  }
-}
-
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
   }
 }
+
+/* Grandeurs */
 
 @media screen and (max-width: 1575px) {
   dialog video {
