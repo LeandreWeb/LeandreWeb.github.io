@@ -79,7 +79,7 @@ const setVisible = (elementOrSelector, visible) =>
   (typeof elementOrSelector === 'string'
     ? document.querySelector(elementOrSelector)
     : elementOrSelector
-  ).style.display = visible ? 'block' : 'none';
+  ).style.display = visible ? 'grid' : 'none';
 
 
 setVisible('#loading', true);

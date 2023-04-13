@@ -22,70 +22,10 @@
   background-color: var(--light);
   background-repeat: no-repeat;
   background-position: center;
-  margin: auto;
-  padding-top: 45vh;
+  place-items: center;
+  
 }
 
-.coffee .logo_circle {
-  position: absolute;
-  background-image: url("/public/images/LogoLbbRound.png");
-  background-size: cover;
-  left: 20%;
-  top: 20%;
-  width: 60%;
-  height: 60%;
-  aspect-ratio: 1/1;
-  animation: none;
-  opacity: 1;
-}
-
-.coffee {
-  margin: auto;
-  background: var(--dark);
-  display: grid;
-  border-radius: 4px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  height: 200px;
-  position: relative;
-  width: 200px;
-  padding: 2px;
-  justify-items: center;
-}
-.coffee:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  content: "";
-  height: 110px;
-  width: 50px;
-  border: 15px solid var(--dark);
-  position: absolute;
-  top: 30%;
-  margin-top: -13px;
-  margin-left: -10px;
-  left: 100%;
-  border-radius: 10px;
-}
-.coffee div {
-  height: 20px;
-  width: 8px;
-  background: var(--dark);
-  opacity: 0.3;
-  -webkit-animation: coffee 2s infinite;
-  animation: coffee 2s infinite;
-}
-.coffee div:nth-child(1) {
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-}
-.coffee div:nth-child(2) {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-}
-.coffee div:nth-child(3) {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
 
 body {
   font-family: "Clash Grotesk", sans-serif;
