@@ -44,6 +44,14 @@ hr {
   
 }
 
+#loading img {
+  animation: rotate .75s ease-in-out infinite forwards;
+}
+
+
+
+
+
 /* --- header --- */
 
 
@@ -782,6 +790,23 @@ dialog video {
   to {
     stroke-dashoffset: 0;
   }
+}
+
+@keyframes rotate {
+  to{
+    rotate: 360deg;
+  }
+  
+}
+
+@keyframes appear {
+  from{
+    bottom: -25%;
+  }
+  to{
+    bottom: 0px;
+  }
+  
 }
 
 /* Grandeurs */
