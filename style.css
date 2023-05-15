@@ -15,6 +15,10 @@
   --light-transparent: #f5f5f588;
 }
 
+html{
+  font-size:62.5%
+}
+
 body {
   font-family: "Clash Grotesk", sans-serif;
   color: var(--dark);
@@ -161,12 +165,12 @@ header {
 }
 
 #name {
-  font-size: 10em;
-  
+  font-size: 18rem;
+
   color: var(--dark);
 }
 .last-name {
-  font-size: 5em;
+  font-size: 6.4rem;
 }
 
 #name-job {
@@ -180,7 +184,7 @@ header {
   left: 0.5em;
   bottom: 0;
   color: var(--accent);
-  font-size: 2em;
+  font-size: 2.4rem;
   font-family: "Chillax", sans-serif;
   font-weight: 600;
 }
@@ -190,6 +194,10 @@ header {
   display: flex;
   gap: 1em;
   flex-wrap: wrap;
+}
+
+#contact h2 {
+  font-size: 2.4rem;
 }
 
 #person-container {
@@ -261,7 +269,7 @@ header {
 #mail,
 #github,
 #phone {
-  font-size: 2rem;
+  font-size: 3.2rem;
   font-weight: 800;
   color: var(--dark);
 }
@@ -287,13 +295,15 @@ header {
 .contact-info {
   color: var(--accent);
   font-weight: 500;
+  font-size: 2.4rem;
 }
+
 
 .cv {
   display: block;
   color: var(--complementary);
   font-weight: 800;
-  font-size: x-large;
+  font-size: 3.2rem;
 }
 
 /* Body wrapper */ 
@@ -308,7 +318,7 @@ header {
 
 /* about-me */
 .about-me {
-  font-size: xx-large;
+  font-size: 3.2rem;
   font-weight: 800;
   min-height: 5em;
   margin: 1em;
@@ -321,12 +331,16 @@ header {
   margin: 1em;
 }
 
+.languages h2 {
+  font-size: 3.2rem;
+}
+
 .languages ::marker {
   color: var(--accent);
 }
 
 .languages li {
-  font-size: xx-large;
+  font-size: 3.2rem;
   margin: 0.5em 1em;
   width: fit-content;
   position: relative;
@@ -381,7 +395,7 @@ legend {
   margin-left: 1em;
   color: var(--accent);
   font-weight: 700;
-  font-size: 2em;
+  font-size: 3.6rem;
 }
 .page-presenter {
   margin: 2em 0;
@@ -430,12 +444,13 @@ legend {
 
 .sites-titles {
   margin: 1em 0;
+  font-size: 3.6rem;
 }
 
 
 .site-description {
   padding: 1em;
-  font-size: 1.5em;
+  font-size: 2.4rem;
 }
 
 /* Pop-up video */
@@ -448,6 +463,7 @@ legend {
   color: white;
   background: linear-gradient(transparent 0%, rgb(4, 4, 4) 100%);
   transition: 0.5s;
+  font-size: 2.4rem;
 }
 
 dialog {
@@ -466,7 +482,7 @@ dialog {
 
 dialog h1 {
   margin-left: 1em;
-  font-size: 2.25rem;
+  font-size: 2.4rem;
   color: var(--accent);
 }
 
@@ -480,7 +496,7 @@ dialog h1 {
 
 .close {
   position: absolute;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 800;
   cursor: pointer;
   background-color: transparent;
@@ -837,6 +853,36 @@ dialog video {
   }
 }
 
+@media screen and (max-width: 735px){
+
+  
+  #name-job {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  #name {
+    font-size: 4.8rem;
+    text-align: center;
+  }
+  .last-name {
+    text-align: center;
+    font-size: 3em;
+  }
+  #job {
+    position: relative;
+    left: 0;
+  }
+  .presentation {
+    background-image: url(/public/images/cellbackground.svg);
+  }
+}
+
+
+
 @media screen and (max-width: 645px) {
   .page:hover {
     transform: scale(1);
@@ -869,30 +915,13 @@ dialog video {
     max-width: 90%;
     border-radius: 1em;
   }
-
-  #name-job {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-  }
-
-  #name {
-    font-size: 5em;
+  .about-me {
+    
     text-align: center;
   }
-  .last-name {
-    text-align: center;
-    font-size: 3em;
-  }
-  #job {
-    position: relative;
-    left: 0;
-  }
-  .presentation {
-    background-image: url(/public/images/cellbackground.svg);
-  }
+
+  
+  
 }
 
 @media screen and (max-width: 375px) {
