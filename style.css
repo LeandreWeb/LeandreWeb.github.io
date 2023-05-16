@@ -453,6 +453,27 @@ legend {
   font-size: 2.4rem;
 }
 
+.website{
+  display: inline-block;
+  font-size: 3.6rem;
+  text-decoration: none;
+  text-align: right;
+  margin: 2rem;
+  color: var(--accent);
+  font-weight: 800;
+}
+.website::after{
+  display: block;
+  width: 0%;
+  height: .5rem;
+  background-color: var(--accent);
+  content: "";
+  transition: .5s;
+}
+.website:hover::after{
+  width: 100%;
+}
+
 /* Pop-up video */
 
 .pop-up-infos {
